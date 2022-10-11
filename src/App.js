@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import Errors from "./components/Errors/Errors";
 import Home from "./components/Home/Home";
 import Main from "./layouts/Main";
 
@@ -8,6 +9,7 @@ function App() {
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <Errors></Errors>,
       children: [
         {
           path: "/",

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Topic = ({ topic }) => {
   const { id, name, logo } = topic;
@@ -8,7 +9,7 @@ const Topic = ({ topic }) => {
       <div className="flex gap-4 mt-2 justify-around">
         <p className="font-bold">{name}</p>
         <button class="bg-blue-500 hover:bg-blue-700 text-white  px-2 rounded">
-          Start Quiz
+          <Link to={`/quiz/${id}`}> Start Quiz</Link>
         </button>
       </div>
     </div>

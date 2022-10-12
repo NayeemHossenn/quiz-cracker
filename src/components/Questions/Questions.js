@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 const Questions = ({ ques, questionClick, value }) => {
   const { options, id, question, correctAnswer } = ques;
@@ -14,7 +16,9 @@ const Questions = ({ ques, questionClick, value }) => {
       <br />
       <div className="flex justify-between">
         <p className="text-xl my-3">{question}</p>
-        <button onClick={() => showAnswer(correctAnswer)}>see answer</button>
+        <button onClick={() => showAnswer(correctAnswer)}>
+          <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+        </button>
       </div>
       {options.map((option) => (
         <p

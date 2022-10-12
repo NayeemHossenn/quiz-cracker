@@ -17,7 +17,6 @@ const Questions = ({ ques, questionClick, value }) => {
   }
 
   const showAnswer = (correctAnswer) => {
-    // alert(correctAnswer);
     toast.success(correctAnswer, { position: "top-center", autoClose: 3000 });
   };
   return (

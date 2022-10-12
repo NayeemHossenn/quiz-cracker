@@ -1,12 +1,29 @@
 import React from "react";
 
-const Questions = ({ ques }) => {
+const Questions = ({ ques, questionClick, value }) => {
   const { options, id, question, correctAnswer } = ques;
+  console.log(value);
+  if (value === correctAnswer) {
+    alert("correct answer");
+  }
+  const showAnswer = (correctAnswer) => {
+    alert(correctAnswer);
+  };
   return (
-    <div>
-      <p>{options}</p>
-      <p>{question}</p>
-      <p>{correctAnswer}</p>
+    <div className="w-[70%] p-4">
+      <br />
+      <div className="flex justify-between">
+        <p className="text-xl my-3">{question}</p>
+        <button onClick={() => showAnswer(correctAnswer)}>see answer</button>
+      </div>
+      {options.map((option) => (
+        <p
+          className=" mx-8 border border-sky-500 w-[80%] p-2 cursor-pointer hover:bg-sky-300"
+          onClick={(e) => questionClick(e)}
+        >
+          {option}
+        </p>
+      ))}
     </div>
   );
 };

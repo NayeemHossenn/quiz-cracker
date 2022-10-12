@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between mx-8 text-center my-8">
+    <nav className="flex justify-between  text-center h-[70px] p-4 bg-gray-100">
       <div>
         <h2 className="font-bold text-3xl text-blue-700">MyQuiz</h2>
       </div>
@@ -27,6 +27,16 @@ const Header = () => {
           to="/quiz"
         >
           Quiz
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "text-xl mx-3  text-red-500"
+              : " text-xl mx-3 text-blue-700"
+          }
+          to="/statistics"
+        >
+          Statistics
         </NavLink>
         <NavLink
           className={({ isActive }) =>

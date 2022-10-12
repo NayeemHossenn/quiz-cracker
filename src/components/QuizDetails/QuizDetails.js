@@ -41,16 +41,17 @@ const QuizDetails = () => {
   //console.log(quizes);
   return (
     <div>
-      <h2 className="text-xl font-bold">Quiz details:{quizes.name}</h2>
-
-      {quizes.questions.map((ques) => (
-        <Questions
-          key={ques.id}
-          ques={ques}
-          questionClick={questionClick}
-          value={value}
-        ></Questions>
-      ))}
+      <div className="bg-gray-200 ">
+        <h2 className="text-xl font-bold">Quiz details:{quizes.name}</h2>{" "}
+        {quizes.questions.map((ques) => (
+          <Questions
+            key={ques.id}
+            ques={ques}
+            questionClick={questionClick}
+            value={value}
+          ></Questions>
+        ))}
+      </div>
     </div>
   );
 };

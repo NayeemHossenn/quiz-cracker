@@ -1,6 +1,8 @@
-## MyQuiz app
+# MyQuiz app
 
-# Live website link given below:
+## Live website link given below:
+
+https://dreamy-blini-5dfc87.netlify.app/
 
 ### `Here is project's functionality`
 
